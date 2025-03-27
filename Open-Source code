@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMP-REPACKS</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        margin-top: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+      }
+      .game-button {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+      }
+      .game-info {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .github-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 25px;
+        font-size: 18px;
+        color: white;
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+      .github-button:hover {
+        background-color: #555;
+      }
+      .banner {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        background: repeating-linear-gradient(
+          45deg,
+          yellow,
+          yellow 10px,
+          black 10px,
+          black 20px
+        );
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white !important;
+        text-shadow: 2px 2px 4px black;
+        transform: rotate(-10deg);
+        transform-origin: left top;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">Website Under Construction</div>
+    <h1>EMP-REPACKS</h1>
+    <div class="container">
+      <button class="game-button" style="background-image: url('https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/12624193/aQy1AbkiAsnC4YoozA2xQNksvIAiw.png');" onclick="showGameInfo('BeamNG Tech Demo', 'BeamNG.drive is an incredibly realistic driving game with near-limitless possibilities.', 'https://buzzheavier.com/ym4nhuphgbxn')"></button>
+      
+      <button class="game-button" style="background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQn7oWSzMhvGgdiNux7SmBMI9ywWT0aEmaloePnygw-4_SMYIw4MMHRv_uqR2Daapp-EkB_Ag');" onclick="showGameInfo('BeamNG.Drive', 'BeamNG.drive is an incredibly realistic driving game with near-limitless possibilities.', 'buzzheavier.com/link2')"></button>
+      
+      <button class="game-button" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Portal2cover.jpg/220px-Portal2cover.jpg');" onclick="showGameInfo('Portal 2', 'Portal 2 draws from the award-winning formula of innovative gameplay, story, and music that earned the original Portal over 70 industry accolades and created a cult following.   The single-player portion of Portal 2 introduces a cast of dynamic new characters, a host of fresh puzzle elements, and a much larger set of devious test chambers. Players will explore never-before-seen areas of the Aperture Science Labs and be reunited with GLaDOS, the occasionally murderous computer companion who guided them through the original game', 'https://buzzheavier.com/r0n8evrnba8c')"></button>
+    </div>
+    
+    <div id="game-info" class="game-info">
+      <h2 id="game-title"></h2>
+      <p id="game-description"></p>
+      <input type="text" value="BuzzHeavier Download" readonly />
+      <br /><br />
+      <input type="text" id="linkInput" value="" readonly onclick="openLink()" style="cursor: pointer; text-decoration: underline; color: blue; border: none; background: none; width: auto;">
+    </div>
+    
+    <a href="https://github.com/EMP-REPACKS" target="_blank" class="github-button">Visit My GitHub</a>
+    
+    <script>
+      function showGameInfo(title, description, link) {
+        document.getElementById("game-title").innerText = title;
+        document.getElementById("game-description").innerText = description;
+        document.getElementById("linkInput").value = link;
+        document.getElementById("game-info").style.display = "block";
+      }
+      
+      function openLink() {
+        const input = document.getElementById("linkInput");
+        window.open(input.value, "_blank");
+      }
+    </script>
+  </body>
+</html>
